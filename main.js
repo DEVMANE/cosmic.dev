@@ -76,7 +76,7 @@ function Shader(mustacheTemplate) {
     // Compile-time shader parameters
     this.parameters = {
         n_steps: 200,
-        quality: 'high',
+        quality: 'fast',
         accretion_disk: true,
         planet: {
             enabled: true,
@@ -97,7 +97,7 @@ function Shader(mustacheTemplate) {
         },
 
         planetEnabled: function() {
-            return this.planet.enabled && this.quality !== 'fast';
+            return this.planet.enabled;
         },
 
         observerMotion: function() {
