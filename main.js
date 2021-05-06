@@ -80,7 +80,7 @@ function Shader(mustacheTemplate) {
         accretion_disk: true,
         planet: {
             enabled: true,
-            distance: 5,
+            distance: 4,
             radius: 1
         },
         lorentz_contraction: true,
@@ -89,11 +89,11 @@ function Shader(mustacheTemplate) {
         beaming: true,
         doppler_shift: true,
         light_travel_time: true,
-        time_scale: 1.5,
+        time_scale: 2,
         observer: {
             motion: true,
-            distance: 5.1,
-            orbital_inclination: -30
+            distance: 4.1,
+            orbital_inclination: -20
         },
 
         planetEnabled: function() {
