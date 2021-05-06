@@ -1,0 +1,68 @@
+body {
+    background-color: #000;
+    margin: 0px;
+    overflow: hidden;
+    color: rgb(177, 177, 177);
+    font-family: 'Aldrich';
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.pro {
+    text-decoration: underline;
+    color: rgb(131, 80, 199);
+}
+
+.info {
+    text-align: center;
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    color: #9e9d9d;
+}
+
+.link-bar {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#loader {
+    margin-top: 20%;
+}
+
+.disclaimer {
+    margin-top: 1em;
+    color: gray;
+}
+
+#hint-text {
+    position: absolute;
+    /*right: 270px;*/
+    width: 100%;
+    top: 20px;
+    text-align: center;
+    font-weight: normal;
+    color: #cccccc;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #cccccc;
+}
+
+.initially-hidden {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 800px) {
+    .hidden-phone {
+        visibility: hidden;
+    }
+}
