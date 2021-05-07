@@ -6,7 +6,7 @@
 if (!Detector.webgl) Detector.addGetWebGLMessage();
 
 function Observer() {
-    this.position = new THREE.Vector3(10, 0, 0);
+    this.position = new THREE.Vector3(6, 6, 6);
     this.velocity = new THREE.Vector3(0, 1, 0);
     this.orientation = new THREE.Matrix3();
     this.time = 0.0;
@@ -76,11 +76,11 @@ function Shader(mustacheTemplate) {
     // Compile-time shader parameters
     this.parameters = {
         n_steps: 200,
-        quality: 'fast',
+        quality: 'high',
         accretion_disk: true,
         planet: {
             enabled: true,
-            distance: 4,
+            distance: 3,
             radius: 1
         },
         lorentz_contraction: true,
@@ -89,11 +89,11 @@ function Shader(mustacheTemplate) {
         beaming: true,
         doppler_shift: true,
         light_travel_time: true,
-        time_scale: 2,
+        time_scale: 1,
         observer: {
             motion: true,
             distance: 4.1,
-            orbital_inclination: -20
+            orbital_inclination: -10
         },
 
         planetEnabled: function() {
@@ -288,7 +288,7 @@ function setupGUI() {
 
     var folder = gui.addFolder('Observer');
     folder.add(p.observer, 'motion').onChange(function(motion) {
-        updateCamera();
+        // updateCamera();
         updateShader();
         if (motion) {
             hint.text('Moving observer; drag to rotate camera');
@@ -297,7 +297,7 @@ function setupGUI() {
         }
         hint.fadeIn();
     });
-    folder.add(p.observer, 'distance').min(1.5).max(30).onChange(updateCamera);
+    // folder.add(p.observer, 'distance').min(1.5).max(30).onChange(updateCamera);
     folder.open();
 
     folder = gui.addFolder('Planet');
@@ -416,7 +416,7 @@ function animate() {
         render();
         lastCameraMat = camera.matrixWorldInverse.clone();
     }
-    stats.update();
+    // stats.update();
 }
 
 var lastCameraMat = new THREE.Matrix4().identity();

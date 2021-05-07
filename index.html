@@ -7,19 +7,19 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <meta property="og:url" content="https://cosmic.dev" />
     <meta property="og:title" content="COSMIC.DEV - a cosmic developer." />
-    <meta property="og:description" content="A real cosmic developer in this f*ckin' universe." />
+    <meta property="og:description" content="The real cosmic developer in this f*ckin' universe." />
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
     <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
 </head>
 
 <body>
-    <div id="hint-text" class="hidden-phone initially-hidden">
+    <div id="hint-text" class="hidden-phone initially-hidden top-container">
         <!-- Drag to rotate or toggle variables on the right ⟶ -->
-        <h1>C O S M I C . D E V</h1>
-        <p>A COSMIC <span class="pro">DEV</span>ELOPER.</p>
-
-
+        <img class="logo img1" src="img/blackhole-icon.png" alt="uranus">
+        <h1 class="header-top">C O S M I C . D E V</h1>
+        <p class="desc-top">A COSMIC <span class="pro">DEV</span>ELOPER.</p>
     </div>
     <div class="info ">
         <div id="loader">
@@ -30,15 +30,32 @@
         </div>
     </div>
 
-    <div class="link-bar">
-        <!-- <a href="README" target="_blank"><i class="fa fa-question-circle fa-lg"></i> What is this?</a>
-            |
-            <a href="https://github.com/oseiskar/black-hole" target="_blank"><i class="fa fa-github fa-lg"></i> Source</a>
-            |
-            <a href="docs/physics.html" target="_blank"><i class="fa fa-lg">&Sigma;</i> Physics</a>
-            |
-            <a href="COPYRIGHT" target="_blank"><i class="fa fa-copyright fa-lg"></i> Copyright</a> -->
-    </div>
+    <!-- <div class="middle-container">
+        <div class="profile">
+            <img src="" alt="">
+            <h2>Hello.</h2>
+            <p>Lorem ipsum dolor sit amet, vitae volutpat, dui conubia, dolor urna. Non auctor, montes nulla distinctio.</p>
+        </div>
+        <hr>
+        <div class="skills">
+            <h2>My Skills.</h2>
+            <div class="skill-row">
+
+                <h3>Lorem & Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, quis in duis, iaculis id felis. Consectetuer vestibulum, nunc urna lectus, erat ligula. Hendrerit nam, lectus ante, ut lorem eros.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="contact-me">
+            <h2>Get In Touch</h2>
+            <h3>Lorem ipsum dolor sit amet, non elit.</h3>
+            <p>Lorem ipsum dolor sit amet, in quis, aenean amet. Phasellus sodales, tellus donec dui, ornare erat.</p>
+            <a class="btn" href="mailto:name@email.com">CONTACT ME</a>
+        </div>
+    </div> -->
+
+
+
 
     <script src="js-libs/jquery-2.1.4.min.js"></script>
     <script src="js-libs/three.min.js"></script>
@@ -58,6 +75,34 @@
     <script data-src="raytracer.glsl" data-name="raytracer" type="x-shader/x-fragment"></script>
     <script src="main.js"></script>
 
+    <div class="card initially-hidden">
+        <h1 class=""><small>Development</small><br>Skills Sets & Experience.</h1>
+        <hr class="">
+        <p class="large">HTML | CSS | BOOTSTRAP | JQUERY | JAVA | C#.NET | PHP
+        </p>
+        <p class="large">
+            LARAVEL | VUE.JS | ANGULAR | REACT | NODE.JS | THREE.JS
+        </p>
+        <p class="large">
+            MYSQL | MSSQL | ORACLE | POSTGRESQL | MONGODB | MARIADB
+        </p>
+        <p class="large">
+            XAMARIN FORM | DART | FLUTTER | TFLITE | PYTORCH | FLASK
+        </p>
+        <p class="large">
+            EXPRESS.JS | FIREBASE | AWS | FIGMA | THREE.JS | SOURCETREE
+        </p>
+        <p class="large">
+            RESTFUL API | SOAP | MICROSERVICES | DOCKER DESKTOP | GIT
+        </p>
+    </div>
+
+    <div class="bottom-container initially-hidden">
+        <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+        <a class="footer-link" href="https://twitter.com/">Twitter</a>
+        <a class="footer-link" href="https://cosmic-coder-dev.github.io/cosmic.dev/">Website</a>
+        <p>© 2021 COSMIC.DEV</p>
+    </div>
 </body>
 
 </html>
