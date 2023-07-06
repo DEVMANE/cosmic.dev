@@ -139,6 +139,7 @@
         
         if (toggleButton && card) {
             toggleButton.addEventListener('click', function() {
+                alert("card.style.display : " +card.style.display);
                 if (card.style.display === "none") {
                     card.style.display = "block";
                 } else {
