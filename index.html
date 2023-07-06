@@ -21,7 +21,7 @@
         <h1 class="header-top">C O S M I C . D 3 V</h1>
         <p class="desc-top">A COSMIC <span class="pro">DEV</span>ELOPER.</p>
     </div>
-    <div class="contenedor">
+    <div class="contenedor" id="mosquito">
         <div class="boton-inicial" onclick="toggleCard()"></div> 
             <div class="display">
                 <label class="texto-display">SKILL SETS & EXPERIENCES.</label>
@@ -135,11 +135,38 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function(){
-            // Get the current year
-            var currentYear = new Date().getFullYear();
+           
+            function dynamicCopyrights(){
+             // Get the current year
+             var currentYear = new Date().getFullYear();
 
             // Set the year in the copyright element
             document.getElementById("copyright").textContent = "© " + currentYear + " C O S M I C . D 3 V";
+        }
+
+            var mosquito = document.getElementById("mosquito");
+            var angle = 0;
+            var isPaused = false;
+
+            function updatePosition() {
+                if (!isPaused) {
+                    var top = 50 + Math.sin(angle) * 40;
+                    var left = 50 + Math.cos(angle) * 40;
+                    mosquito.style.top = top + '%';
+                    mosquito.style.left = left + '%';
+                    angle += 0.05;
+                }
+                requestAnimationFrame(updatePosition);
+            }
+            requestAnimationFrame(updatePosition);
+
+            mosquito.addEventListener("mouseenter", function() {
+                isPaused = true;
+            });
+
+            mosquito.addEventListener("mouseleave", function() {
+                isPaused = false;
+            });
             
             });
 
@@ -152,6 +179,8 @@
                 card.style.display = "none";
             }
         }
+
+        
     </script>
 </body>
 

@@ -303,8 +303,8 @@ h1 {
   
   .contenedor {
     position: absolute;
-    top: 10%; /* Adjust this value to change the top position */
-    right: 65%;
+    top: 15%; /* Adjust this value to change the top position */
+    left: 75%;
   }
   
   .contenedor:hover .display{
