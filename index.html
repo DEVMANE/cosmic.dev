@@ -135,8 +135,6 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function(){
-           
-
                 // Get the current year
                 var currentYear = new Date().getFullYear();
 
@@ -144,49 +142,38 @@
                 document.getElementById("copyright").textContent = "© " + currentYear + " C O S M I C . D 3 V";
 
 
-            var mosquito = document.getElementById("mosquito");
-            var speed = 0.3;
-            var angleChange = 2;
-            var angle = Math.random() * 360;
-            var isPaused = false;
-
-            function updatePosition() {
-                if (!isPaused) {
-                    var top = parseFloat(mosquito.style.top || 50) + Math.sin(degToRad(angle)) * speed;
-                    var left = parseFloat(mosquito.style.left || 50) + Math.cos(degToRad(angle)) * speed;
-
-                    // Boundary conditions
-                    if (top <= 0 || top >= 90) {
-                        angle = 180 - angle;
+                var mosquito = document.getElementById("mosquito");
+                var speedX = (Math.random() - 0.5) * 10;
+                var speedY = (Math.random() - 0.5) * 10;
+                var posX = mosquito.offsetLeft;
+                var posY = mosquito.offsetTop;
+                
+                function updatePosition() {
+                    var mosquitoWidth = mosquito.offsetWidth;
+                    var mosquitoHeight = mosquito.offsetHeight;
+                    var screenWidth = window.innerWidth;
+                    var screenHeight = window.innerHeight;
+                    
+                    // Move mosquito
+                    posX += speedX;
+                    posY += speedY;
+                    
+                    // Check for collision with screen edges
+                    if (posX + mosquitoWidth > screenWidth || posX < 0) {
+                        speedX = -speedX * (0.9 + Math.random() * 0.2); // Reflect and change speed randomly by 10%
                     }
-                    if (left <= 0 || left >= 90) {
-                        angle = 360 - angle;
+                    
+                    if (posY + mosquitoHeight > screenHeight || posY < 0) {
+                        speedY = -speedY * (0.9 + Math.random() * 0.2); // Reflect and change speed randomly by 10%
                     }
-
-                    // Randomly change direction
-                    if (Math.random() < 0.01) {
-                        angle += (Math.random() * angleChange * 2) - angleChange;
-                    }
-
-                    mosquito.style.top = top + '%';
-                    mosquito.style.left = left + '%';
+                    
+                    // Set new position
+                    mosquito.style.left = posX + 'px';
+                    mosquito.style.top = posY + 'px';
+                    
+                    requestAnimationFrame(updatePosition);
                 }
                 requestAnimationFrame(updatePosition);
-            }
-
-            requestAnimationFrame(updatePosition);
-
-            mosquito.addEventListener("mouseenter", function() {
-                isPaused = true;
-            });
-
-            mosquito.addEventListener("mouseleave", function() {
-                isPaused = false;
-            });
-
-            function degToRad(deg) {
-                return deg * (Math.PI / 180);
-            }
             
             });
 
