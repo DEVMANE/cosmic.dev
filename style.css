@@ -1,4 +1,4 @@
-.parent-container {
+.card {
     display: flex;
     align-items: center; /* This centers vertically */
     justify-content: center; /* This centers horizontally if needed */
