@@ -131,26 +131,23 @@
 
             // Set the year in the copyright element
             document.getElementById("copyright").textContent = "© " + currentYear + " C O S M I C . D 3 V";
-        });
 
-        document.addEventListener("DOMContentOnClickToggleCard", function() {
-        const toggleButton = document.getElementById('toggle-button');
-        const card = document.getElementById('skill-card');
-        
-        if (toggleButton && card) {
-            toggleButton.addEventListener('click', function() {
-                alert("card.style.display : " +card.style.display);
-                if (card.style.display === "none") {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
+            const toggleButton = document.getElementById('toggle-button');
+            const card = document.getElementById('skill-card');
+            
+            if (toggleButton && card) {
+                toggleButton.addEventListener('click', function() {
+                    alert("card.style.display : " +card.style.display);
+                    if (card.style.display === "none") {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            } else {
+                console.log('Button or card element not found.');
             }
             });
-        } else {
-            console.log('Button or card element not found.');
-        }
-    });
-
     </script>
 </body>
 
