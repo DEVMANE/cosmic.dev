@@ -115,6 +115,8 @@ h1 {
     top: 25%;
     right: 1%;
     opacity: 65%;
+    transition: opacity 1s, transform 1s;
+    transform-origin: top right;
 }
 
 .card h1,
@@ -152,4 +154,9 @@ h1 {
 
 .img5 {
     filter: contrast(40%) sepia(1) hue-rotate(20deg) saturate(1000%);
+}
+
+.hidden {
+    opacity: 0;
+    transform: scale(0);
 }
