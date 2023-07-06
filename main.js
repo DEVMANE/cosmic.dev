@@ -80,8 +80,8 @@ function Shader(mustacheTemplate) {
         accretion_disk: true,
         planet: {
             enabled: true,
-            distance: 3.5,
-            radius: 0.6
+            distance: 4.1,
+            radius: 0.4
         },
         lorentz_contraction: true,
         gravitational_time_dilation: true,
