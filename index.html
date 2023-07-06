@@ -133,14 +133,19 @@
             document.getElementById("copyright").textContent = "© " + currentYear + " C O S M I C . D 3 V";
         });
 
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener("DOMContentOnClickToggleCard", function() {
         const toggleButton = document.getElementById('toggle-button');
         const card = document.getElementById('skill-card');
+        
+        if (toggleButton && card) {
+            toggleButton.addEventListener('click', function() {
+                card.classList.toggle('hidden');
+            });
+        } else {
+            console.log('Button or card element not found.');
+        }
+    });
 
-        toggleButton.addEventListener('click', function() {
-            card.classList.toggle('hidden');
-        });
-        });
     </script>
 </body>
 
