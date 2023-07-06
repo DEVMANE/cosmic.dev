@@ -252,7 +252,7 @@ function init(textures) {
 
     window.addEventListener('resize', onWindowResize, false);
 
-    // setupGUI();
+    setupGUI();
 }
 
 function setupGUI() {
