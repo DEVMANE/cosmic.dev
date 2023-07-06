@@ -80,7 +80,7 @@ function Shader(mustacheTemplate) {
         accretion_disk: true,
         planet: {
             enabled: true,
-            distance: 4.1,
+            distance: 4.4,
             radius: 0.4
         },
         lorentz_contraction: true,
