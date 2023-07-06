@@ -257,18 +257,18 @@ function init(textures) {
 
 function setupKeyboardControls(camera) {
     document.addEventListener('keydown', function(event) {
-        const moveDistance = 500; // You can change this value to control the speed
+        const moveDistance = 1; // Adjust this value to control the speed
         
         switch (event.key) {
             // Move Forward
             case 'w':
             case 'ArrowUp':
-                camera.position.z -= moveDistance;
+                camera.translateZ(-moveDistance);
                 break;
             // Move Backward
             case 's':
             case 'ArrowDown':
-                camera.position.z += moveDistance;
+                camera.translateZ(moveDistance);
                 break;
             // Move Left
             case 'a':
