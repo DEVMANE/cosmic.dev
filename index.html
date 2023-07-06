@@ -21,8 +21,8 @@
         <h1 class="header-top">C O S M I C . D 3 V</h1>
         <p class="desc-top">A COSMIC <span class="pro">DEV</span>ELOPER.</p>
     </div>
-    <div class="contenedor" id="mosquito">
-        <div class="boton-inicial" onclick="toggleCard()"></div> 
+    <div class="contenedor" id="mosquito" onclick="toggleCard()">
+        <div class="boton-inicial"></div> 
             <div class="display">
                 <label class="texto-display">SKILL SETS & EXPERIENCES.</label>
             </div>
@@ -136,28 +136,44 @@
     <script>
         document.addEventListener("DOMContentLoaded", function(){
            
-            function dynamicCopyrights(){
-             // Get the current year
-             var currentYear = new Date().getFullYear();
 
-            // Set the year in the copyright element
-            document.getElementById("copyright").textContent = "© " + currentYear + " C O S M I C . D 3 V";
-        }
+                // Get the current year
+                var currentYear = new Date().getFullYear();
+
+                // Set the year in the copyright element
+                document.getElementById("copyright").textContent = "© " + currentYear + " C O S M I C . D 3 V";
+
 
             var mosquito = document.getElementById("mosquito");
-            var angle = 0;
+            var speed = 0.3;
+            var angleChange = 2;
+            var angle = Math.random() * 360;
             var isPaused = false;
 
             function updatePosition() {
                 if (!isPaused) {
-                    var top = 50 + Math.sin(angle) * 40;
-                    var left = 50 + Math.cos(angle) * 40;
+                    var top = parseFloat(mosquito.style.top || 50) + Math.sin(degToRad(angle)) * speed;
+                    var left = parseFloat(mosquito.style.left || 50) + Math.cos(degToRad(angle)) * speed;
+
+                    // Boundary conditions
+                    if (top <= 0 || top >= 90) {
+                        angle = 180 - angle;
+                    }
+                    if (left <= 0 || left >= 90) {
+                        angle = 360 - angle;
+                    }
+
+                    // Randomly change direction
+                    if (Math.random() < 0.01) {
+                        angle += (Math.random() * angleChange * 2) - angleChange;
+                    }
+
                     mosquito.style.top = top + '%';
                     mosquito.style.left = left + '%';
-                    angle += 0.05;
                 }
                 requestAnimationFrame(updatePosition);
             }
+
             requestAnimationFrame(updatePosition);
 
             mosquito.addEventListener("mouseenter", function() {
@@ -167,6 +183,10 @@
             mosquito.addEventListener("mouseleave", function() {
                 isPaused = false;
             });
+
+            function degToRad(deg) {
+                return deg * (Math.PI / 180);
+            }
             
             });
 
