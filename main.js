@@ -76,12 +76,12 @@ function Shader(mustacheTemplate) {
     // Compile-time shader parameters
     this.parameters = {
         n_steps: 200,
-        quality: 'high',
+        quality: 'fast',
         accretion_disk: true,
         planet: {
             enabled: true,
-            distance: 3,
-            radius: 1
+            distance: 3.5,
+            radius: 0.6
         },
         lorentz_contraction: true,
         gravitational_time_dilation: true,
@@ -89,7 +89,7 @@ function Shader(mustacheTemplate) {
         beaming: true,
         doppler_shift: true,
         light_travel_time: true,
-        time_scale: 1,
+        time_scale: 1.5,
         observer: {
             motion: true,
             distance: 4.1,
@@ -251,8 +251,47 @@ function init(textures) {
     onWindowResize();
 
     window.addEventListener('resize', onWindowResize, false);
+    setupKeyboardControls(camera);
+    // setupGUI();
+}
 
-    setupGUI();
+function setupKeyboardControls(camera) {
+    document.addEventListener('keydown', function(event) {
+        const moveDistance = 5; // You can change this value to control the speed
+        
+        switch (event.key) {
+            // Move Forward
+            case 'w':
+            case 'ArrowUp':
+                camera.position.z -= moveDistance;
+                break;
+            // Move Backward
+            case 's':
+            case 'ArrowDown':
+                camera.position.z += moveDistance;
+                break;
+            // Move Left
+            case 'a':
+            case 'ArrowLeft':
+                camera.position.x -= moveDistance;
+                break;
+            // Move Right
+            case 'd':
+            case 'ArrowRight':
+                camera.position.x += moveDistance;
+                break;
+            // Move Up
+            case 'q':
+            case 'Shift':
+                camera.position.y += moveDistance;
+                break;
+            // Move Down
+            case 'e':
+            case 'Control':
+                camera.position.y -= moveDistance;
+                break;
+        }
+    });
 }
 
 function setupGUI() {
