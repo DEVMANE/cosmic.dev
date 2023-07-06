@@ -18,7 +18,7 @@
     <div id="hint-text" class="hidden-phone initially-hidden top-container">
         <!-- Drag to rotate or toggle variables on the right ⟶ -->
         <img class="logo img1" src="img/blackhole-icon.png" alt="uranus">
-        <h1 class="header-top">C O S M I C . D E V</h1>
+        <h1 class="header-top">C O S M I C . D 3 V</h1>
         <p class="desc-top">A COSMIC <span class="pro">DEV</span>ELOPER.</p>
     </div>
     <div class="info ">
@@ -78,31 +78,40 @@
     <div class="card initially-hidden">
         <h1 class=""><small>Development</small><br>Skills Sets & Experience.</h1>
         <hr class="">
-        <p class="large">HTML | CSS | BOOTSTRAP | JQUERY | JAVA | C#.NET | PHP
+        <p class="large">HTML | CSS | BOOTSTRAP | JQUERY | C# | PHP | JAVA
         </p>
         <p class="large">
-            LARAVEL | VUE.JS | ANGULAR | REACT | NODE.JS | THREE.JS
+            THREE.JS | REACT | NEXT.JS | NODE.JS | EXPRESS.JS | 
         </p>
         <p class="large">
             MYSQL | MSSQL | ORACLE | POSTGRESQL | MONGODB | MARIADB
         </p>
         <p class="large">
-            XAMARIN FORM | DART | FLUTTER | TFLITE | PYTORCH | FLASK
+            FLUTTER | DART | FIREBASE | AWS | AZURE | TFLITE | OPENAI API
         </p>
         <p class="large">
-            EXPRESS.JS | FIREBASE | AWS | FIGMA | THREE.JS | SOURCETREE
+            PROMPTS ENGINEERING | CHATGPT | STABLE DIFFUSION | MIDJOURNEY
         </p>
         <p class="large">
-            RESTFUL API | SOAP | MICROSERVICES | DOCKER DESKTOP | GIT
+            API DEVELOPMENT | MICROSERVICES | DOCKER | GIT | JIRA
         </p>
     </div>
 
     <div class="bottom-container initially-hidden">
-        <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
-        <a class="footer-link" href="https://twitter.com/">Twitter</a>
-        <a class="footer-link" href="https://cosmic-coder-dev.github.io/cosmic.dev/">Website</a>
-        <p>© 2021 COSMIC.DEV</p>
+        <a class="footer-link" href="https://www.linkedin.com/in/kushmane/">LinkedIn</a>
+        <a class="footer-link" href="https://twitter.com/therealkushmvne">Twitter</a>
+        <a class="footer-link" href="https://cosmic-d3v.vercel.app/">Website</a>
+        <p id="copyright">© 2021 C O S M I C . D 3 V</p>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            // Get the current year
+            var currentYear = new Date().getFullYear();
+
+            // Set the year in the copyright element
+            document.getElementById("copyright").textContent = "© " + currentYear + " C O S M I C . D 3 V";
+        });
+    </script>
 </body>
 
 </html>
