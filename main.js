@@ -251,56 +251,9 @@ function init(textures) {
     onWindowResize();
 
     window.addEventListener('resize', onWindowResize, false);
-    setupKeyboardControls(camera);
-    animate();
+
     // setupGUI();
 }
-
-function setupKeyboardControls(camera) {
-    document.addEventListener('keydown', function(event) {
-        const moveDistance = 1; // Adjust this value to control the speed
-        
-        switch (event.key) {
-            // Move Forward
-            case 'w':
-            case 'ArrowUp':
-                camera.translateZ(-moveDistance);
-                break;
-            // Move Backward
-            case 's':
-            case 'ArrowDown':
-                camera.translateZ(moveDistance);
-                break;
-            // Move Left
-            case 'a':
-            case 'ArrowLeft':
-                camera.position.x -= moveDistance;
-                break;
-            // Move Right
-            case 'd':
-            case 'ArrowRight':
-                camera.position.x += moveDistance;
-                break;
-            // Move Up
-            case 'q':
-            case 'Shift':
-                camera.position.y += moveDistance;
-                break;
-            // Move Down
-            case 'e':
-            case 'Control':
-                camera.position.y -= moveDistance;
-                break;
-        }
-    });
-}
-
-function animate() {
-    requestAnimationFrame(animate);
-    renderer.render(scene, camera);
-}
-
-
 
 function setupGUI() {
 
