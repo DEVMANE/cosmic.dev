@@ -21,9 +21,15 @@
         <h1 class="header-top">C O S M I C . D 3 V</h1>
         <p class="desc-top">A COSMIC <span class="pro">DEV</span>ELOPER.</p>
     </div>
-    <div class="toggle-button-wrap">
-        <button id="toggle-button" class="toggle-button" onclick="toggleCard()">PRESS HERE!</button>
+    <div class="contenedor">
+        <div class="boton-inicial"></div> 
+            <div class="display">
+                <label class="texto-display" onclick="toggleCard()" >SKILL SETS & EXPERIENCES.</label>
+            </div>
     </div>
+    <!-- <div class="toggle-button-wrap">
+        <button id="toggle-button" class="toggle-button" onclick="toggleCard()">PRESS HERE!</button>
+    </div> -->
     <div class="info ">
         <div id="loader">
             Loading...
@@ -134,8 +140,6 @@
 
             // Set the year in the copyright element
             document.getElementById("copyright").textContent = "© " + currentYear + " C O S M I C . D 3 V";
-
-            toggleCard();
             
             });
 

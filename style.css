@@ -167,7 +167,7 @@ h1 {
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, transparent 25px, transparent 0);
-    color: white;
+    color: rgb(161, 149, 163);
     width: 191px;
     height: 60px;
     font-size: 20px;
@@ -178,3 +178,200 @@ h1 {
     top: 10%; /* Adjust this value to change the top position */
     right: 65%; /* Adjust this value to change the right position */
 }
+
+.contenedor {
+    cursor: pointer;
+      height: 50px;
+    width: 50px;
+      position: fixed;
+      bottom: 50%;
+      z-index: 100;
+      background: #ffffff;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-radius: 65px;
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255/var(--tw-bg-opacity));
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+      word-wrap: break-word;
+      color: #bec0c0;
+      left: calc(50% - 150px);
+      padding: 15px;
+    transition: width 500ms;
+      box-shadow: 0 1px 0 #ccc, 
+        0 2px 0 #c9c9c9, 
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, 0.1),
+        0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.3),
+        0 3px 5px rgba(0, 0, 0, 0.2),
+        0 5px 10px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.2),
+        0 20px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .contenedor:hover {
+    width: 250px;
+  }
+  
+  .boton-inicial {
+    height: 35px;
+    width: 35px;
+    flex: 0 0 35px;
+    margin: 7px;
+    background-color: red;
+    border-radius: 100%;
+    text-transform: uppercase;
+    font-size: 24px;
+    box-sizing: border-box;
+    /*background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);*/
+    background-color: #9100d4;
+   animation: anim-boton-inicial 2s ease-in-out infinite;
+  
+  }
+   
+  @keyframes anim-boton-inicial
+  {
+    0%
+    {
+     box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.2) inset,
+                0px 0px 20px rgba(255, 255, 255, 0.4) inset,
+                0px 0px 10px rgba(255, 255, 255, 0.8) inset,
+                0px 0px 10px rgba(194, 0, 212, 0.486),
+                0px 0px 25px rgba(127, 0, 212, 0.8),
+                0px 0px 50px rgba(212, 0, 194, 0.9);
+      
+    }
+    
+      50%
+    {
+     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1) inset,
+                0px 0px 20px rgba(255, 255, 255, 0.2) inset,
+                0px 0px 10px rgba(255, 255, 255, 0.4) inset,
+                0px 0px 10px rgba(128, 1, 139, 0.1),
+                0px 0px 25px rgba(152, 0, 212, 0.3),
+                0px 0px 50px rgba(177, 0, 212, 0.5);
+    }
+    
+    100%
+    {
+     box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.2) inset,
+                0px 0px 20px rgba(255, 255, 255, 0.4) inset,
+                0px 0px 10px rgba(255, 255, 255, 0.8) inset,
+                0px 0px 10px rgba(134, 0, 212, 0.5),
+                0px 0px 25px rgba(145, 0, 212, 0.8),
+                0px 0px 50px rgba(177, 0, 212, 0.9);
+    }
+  }
+  
+  
+  .display {
+   display: none;
+    margin: 0 15px 0 25px;
+    padding: 0px 20px;
+   background-color: #8600d433;
+   position: relative;
+   height: 100%;
+   width: 100%;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-evenly;
+   border-radius: 15px;
+   animation: holographic 5s ease-in-out;
+    border: solid 1px #bc7bf1;
+  }
+  
+  .contenedor:hover .display:before {
+      content: "";
+      display: block;
+      width: 44px;
+      height: 7px;
+      background: white;
+      position: absolute;
+      bottom: -1px;
+      right: 22px;
+      border-top: solid 1px #bc7bf1;
+      border-left: solid 1px #bc7bf1;
+      border-right: solid 1px #bc7bf1;
+      border-radius: 5px 5px 0px 0px;
+  }
+  
+  .contenedor {
+    position: absolute;
+    top: 10%; /* Adjust this value to change the top position */
+    right: 65%;
+  }
+  
+  .contenedor:hover .display{
+    display: flex;
+     animation: anim-display 1s ease-in-out;
+  }
+  
+  
+  @keyframes anim-display 
+  {
+    0%
+    {
+     opacity: 0;  
+    }
+    
+    100% {
+      opacity: 100%
+    }
+    
+  }
+  
+   /* 
+  .boton-inicial:hover:before{
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate2 2s linear infinite;
+  }
+  
+  @keyframes animate2
+  {
+    0%
+    {
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5) inset,
+                0px 0px 20px rgba(255, 255, 255, 0.8) inset,
+                0px 0px 10px rgba(255, 255, 255, 0.9) inset;
+    }
+    
+      50%
+    {
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0) inset,
+                0px 0px 20px rgba(255, 255, 255, 0) inset,
+                0px 0px 10px rgba(255, 255, 255, 0) inset;
+    }
+    
+    100%
+    {
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5) inset,
+                0px 0px 20px rgba(255, 255, 255, 0.8) inset,
+                0px 0px 10px rgba(255, 255, 255, 0.9) inset;
+    }
+  }
+  
+  */
+  .letras {
+      color: #c200d4;
+      font-weight: bold;
+      font-family: Helvetica;
+      text-shadow: 0 1px 0 #900ca1,
+        0 2px 0 rgba(144, 12, 161, 0.8),
+        0 3px 0 rgba(103, 18, 159, 0.6),
+        0 4px 0 rgba(143, 18, 159, 0.4),
+        0 5px 0 rgba(143, 18, 159, 0.2),
+        0 6px 1px rgba(0, 0, 0, 0.1),
+        0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.3),
+        0 3px 5px rgba(0, 0, 0, 0.2),
+        0 5px 10px rgba(212, 0, 212, 0.25),
+        0 10px 10px rgba(189, 74, 204, 0.2),
+        0 20px 20px rgba(212, 0, 212, 0.15);
+  }
