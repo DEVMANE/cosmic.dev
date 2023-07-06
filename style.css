@@ -1,9 +1,4 @@
-.card {
-    display: flex;
-    align-items: center; /* This centers vertically */
-    justify-content: center; /* This centers horizontally if needed */
-    min-height: 100vh; /* Makes sure the container takes at least full viewport height */
-}
+
 
 body {
     background-color: #000;
@@ -114,10 +109,10 @@ h1 {
     padding: 20px;
     border-radius: 0.25rem;
     filter: drop-shadow(2px 2px 10px #dac088);
-    min-width: 325px;
-    max-width: 450px;
+    min-width: 375px;
+    max-width: 804px;
     position: absolute;
-    top: 40%;
+    top: 25%;
     right: 1%;
     opacity: 65%;
 }
