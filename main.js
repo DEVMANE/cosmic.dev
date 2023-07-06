@@ -393,7 +393,7 @@ function initializeCamera(camera) {
 
     var m = camera.matrixWorldInverse.elements;
 
-    camera.position.set(m[2], m[12], m[20]);
+    camera.position.set(m[2], m[8], m[12]);
 }
 
 function updateCamera(event) {
