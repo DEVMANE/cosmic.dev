@@ -75,7 +75,7 @@
     <script data-src="raytracer.glsl" data-name="raytracer" type="x-shader/x-fragment"></script>
     <script src="main.js"></script>
         <button id="toggle-button">Toggle Skill Set</button>
-        <div class="card initially-hidden">
+        <div id="skill-card" class="card initially-hidden">
             <h1 class=""><small>Development</small><br>Skill Sets & Experiences.</h1>
             <hr class="">
             <p class="large">
@@ -135,7 +135,7 @@
 
         document.addEventListener("DOMContentLoaded", function(){
         const toggleButton = document.getElementById('toggle-button');
-        const card = document.querySelector('.card');
+        const card = document.getElementById('skill-card');
 
         toggleButton.addEventListener('click', function() {
             card.classList.toggle('hidden');
