@@ -21,6 +21,9 @@
         <h1 class="header-top">C O S M I C . D 3 V</h1>
         <p class="desc-top">A COSMIC <span class="pro">DEV</span>ELOPER.</p>
     </div>
+    <div class="toggle-button">
+        <button id="toggle-button" onclick="toggleCard()">Toggle Skill Set</button>
+    </div>
     <div class="info ">
         <div id="loader">
             Loading...
@@ -74,7 +77,7 @@
     </script>
     <script data-src="raytracer.glsl" data-name="raytracer" type="x-shader/x-fragment"></script>
     <script src="main.js"></script>
-        <button id="toggle-button" onclick="toggleCard()">Toggle Skill Set</button>
+        
         <div id="skill-card" class="card initially-hidden" style="display:none;">
             <h1 class=""><small>Development</small><br>Skill Sets & Experiences.</h1>
             <hr class="">
@@ -138,7 +141,7 @@
 
         function toggleCard(){
             const card = document.getElementById('skill-card');
-            alert(card.style.display);
+            // alert(card.style.display);
             if (card.style.display === "none") {
                 card.style.display = "block";
             } else {
