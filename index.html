@@ -75,7 +75,7 @@
     <script data-src="raytracer.glsl" data-name="raytracer" type="x-shader/x-fragment"></script>
     <script src="main.js"></script>
         <button id="toggle-button">Toggle Skill Set</button>
-        <div id="skill-card" class="card initially-hidden">
+        <div id="skill-card" class="card initially-hidden" style="display:none;">
             <h1 class=""><small>Development</small><br>Skill Sets & Experiences.</h1>
             <hr class="">
             <p class="large">
@@ -139,7 +139,11 @@
         
         if (toggleButton && card) {
             toggleButton.addEventListener('click', function() {
-                card.classList.toggle('hidden');
+                if (card.style.display === "none") {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+            }
             });
         } else {
             console.log('Button or card element not found.');
