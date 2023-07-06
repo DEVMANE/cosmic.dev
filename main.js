@@ -257,7 +257,7 @@ function init(textures) {
 
 function setupKeyboardControls(camera) {
     document.addEventListener('keydown', function(event) {
-        const moveDistance = 5; // You can change this value to control the speed
+        const moveDistance = 500; // You can change this value to control the speed
         
         switch (event.key) {
             // Move Forward
@@ -393,7 +393,7 @@ function initializeCamera(camera) {
 
     var m = camera.matrixWorldInverse.elements;
 
-    camera.position.set(m[2], m[6], m[10]);
+    camera.position.set(m[2], m[12], m[20]);
 }
 
 function updateCamera(event) {
