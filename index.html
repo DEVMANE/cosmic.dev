@@ -136,21 +136,12 @@
             });
 
         function toggleCard(){
-
-            const toggleButton = document.getElementById('toggle-button');
             const card = document.getElementById('skill-card');
-            
-            if (toggleButton && card) {
-
-                    alert("card.style.display : " +card.style.display);
-                    if (card.style.display === "none") {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-
+            alert(card.style.display);
+            if (card.style.display === "none") {
+                card.style.display = "block";
             } else {
-                console.log('Button or card element not found.');
+                card.style.display = "none";
             }
         }
     </script>
