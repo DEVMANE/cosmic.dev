@@ -1,3 +1,10 @@
+.parent-container {
+    display: flex;
+    align-items: center; /* This centers vertically */
+    justify-content: center; /* This centers horizontally if needed */
+    min-height: 100vh; /* Makes sure the container takes at least full viewport height */
+}
+
 body {
     background-color: #000;
     margin: 0px;
