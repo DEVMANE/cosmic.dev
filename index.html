@@ -74,7 +74,7 @@
     </script>
     <script data-src="raytracer.glsl" data-name="raytracer" type="x-shader/x-fragment"></script>
     <script src="main.js"></script>
-        <button id="toggle-button">Toggle Skill Set</button>
+        <button id="toggle-button" onclick="toggleCard()">Toggle Skill Set</button>
         <div id="skill-card" class="card initially-hidden" style="display:none;">
             <h1 class=""><small>Development</small><br>Skill Sets & Experiences.</h1>
             <hr class="">
@@ -132,22 +132,27 @@
             // Set the year in the copyright element
             document.getElementById("copyright").textContent = "© " + currentYear + " C O S M I C . D 3 V";
 
+            
+            });
+
+        function toggleCard(){
+
             const toggleButton = document.getElementById('toggle-button');
             const card = document.getElementById('skill-card');
             
             if (toggleButton && card) {
-                toggleButton.addEventListener('click', function() {
+
                     alert("card.style.display : " +card.style.display);
                     if (card.style.display === "none") {
                         card.style.display = "block";
                     } else {
                         card.style.display = "none";
                     }
-                });
+
             } else {
                 console.log('Button or card element not found.');
             }
-            });
+        }
     </script>
 </body>
 
