@@ -252,6 +252,7 @@ function init(textures) {
 
     window.addEventListener('resize', onWindowResize, false);
     setupKeyboardControls(camera);
+    animate();
     // setupGUI();
 }
 
@@ -293,6 +294,13 @@ function setupKeyboardControls(camera) {
         }
     });
 }
+
+function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+}
+
+
 
 function setupGUI() {
 
