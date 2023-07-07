@@ -104,7 +104,7 @@ a:hover {
 }
 
 p a {
-    color: #31c8ff !important;
+    color: #bc7bf1;
     font-weight: 900;
 }
 
@@ -134,15 +134,15 @@ h1 {
 }
 
 .card h1 {
-    color: #4be7c5 !important;
+    color: #bc7bf1 !important;
 }
 
 .card p {
-    color: #b2e9f3 !important;
+    color: #bc7bf1;
 }
 
 .card hr {
-    border-color: #b2e4f3 !important;
+    border-color: #bc7bf1;
 }
 
 .img1 {
