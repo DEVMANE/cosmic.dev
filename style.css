@@ -1,10 +1,10 @@
 
-.card p .large {
+.card .large {
     font-size: 1.1rem;
     color: #de96ff;
 }
 
-.card p .medium {
+.card .medium {
     font-size: 0.5rem;
     color: #FFFFFF;
 }
