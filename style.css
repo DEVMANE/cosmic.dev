@@ -1,12 +1,12 @@
 
-.large {
-    font-size: 4rem;
+.card p .large {
+    font-size: 1.1rem;
     color: #de96ff;
 }
 
-.medium {
-    font-size: 2rem;
-    color: #ffffff;
+.card p .medium {
+    font-size: 0.5rem;
+    color: #FFFFFF;
 }
 
 body {
