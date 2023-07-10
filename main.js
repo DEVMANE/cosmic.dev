@@ -272,7 +272,7 @@ function setupGUI() {
         switch (value) {
             case 'fast':
                 p.n_steps = 40;
-                $('.planet-controls').hide();
+                // $('.planet-controls').hide();
                 break;
             case 'medium':
                 p.n_steps = 100;
@@ -354,7 +354,7 @@ function initializeCamera(camera) {
 
     var m = camera.matrixWorldInverse.elements;
 
-    camera.position.set(m[2], m[4], m[14]);
+    camera.position.set(m[2], m[4], m[7]);
 }
 
 function updateCamera(event) {
