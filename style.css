@@ -1,4 +1,37 @@
-
+.skill-card-inner {
+    width: 100%;
+  }
+  
+  .skill-card-inner .large {
+    font-size: 24px;
+  }
+  
+  .skill-card-inner .medium {
+    font-size: 18px;
+  }
+  
+  /* When the viewport is 768px or less, reduce text size */
+  @media (max-width: 768px) {
+    .skill-card-inner .large {
+      font-size: 18px;
+    }
+    
+    .skill-card-inner .medium {
+      font-size: 14px;
+    }
+  }
+  
+  /* When the viewport is 480px or less, reduce text size further */
+  @media (max-width: 480px) {
+    .skill-card-inner .large {
+      font-size: 14px;
+    }
+    
+    .skill-card-inner .medium {
+      font-size: 12px;
+    }
+  }
+  
 .card .large {
     font-size: 1.1rem;
     color: #de96ff;
